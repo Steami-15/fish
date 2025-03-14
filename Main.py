@@ -1,4 +1,3 @@
-#This is going to be the place where all our code goes when finished ############# Go to me for putting it in before in
 import pygame
 import random
 import time
@@ -10,6 +9,10 @@ Background = pygame.image.load('Fish Tank background.png').convert_alpha()
 Playing_Game = True
 Tick_Speed = pygame.time.Clock()
 Time = 0
+Mouse_X_Pos = 0
+Mouse_Y_Pos = 0
+Mouse_Pos = (Mouse_X_Pos, Mouse_Y_Pos)
+
 
 
 
@@ -21,6 +24,11 @@ while Playing_Game == True:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             Playing_Game = False
+        if event.type == pygame.MOUSEMOTION:
+            Mouse_Pos = event.pos
+        if event.type == pygame.MOUSEBUTTONDOWN:
+            print(Mouse_Pos) #### This should be changed to something else later...
+        
     Tick_Speed.tick(60)
     Time += 1
     Game_Screen.blit(Background, (0, 0))
