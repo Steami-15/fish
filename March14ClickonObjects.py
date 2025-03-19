@@ -25,13 +25,6 @@ pygame.Surface.set_colorkey (chestImg1, [255,0,255])
 chestImg2_0 = pygame.image.load("TreasureChest-2.png (1).jpg").convert_alpha()
 pygame.Surface.set_colorkey (chestImg2, [255,0,255])
 
-class Chest:
-    def __init__(self):
-        self.Frame_num = 0
-        self.X_Pos = random.randint(0, 800-self.Chest_Width)
-        self.Y_Pos = random.randit(0, 600-self.Chest_Height)
-        Game_Screen.blit(self.Chest_Image, (self.X_Pos, self.Y_Pos), (0, self.Chest_Height*self.Frame_num, self.Chest_Width, self.Chest_Height))
-        
 
 
 while 1: #game loop###########################################################
