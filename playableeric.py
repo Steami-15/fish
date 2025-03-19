@@ -1,5 +1,11 @@
 eric_live = pygame.image.load("eric_live (2).png")
 
+player = [100, 450, 0, 0] #xpos, ypos, xvel, yvel
+ticker = 0
+frameWidth = 50
+frameHeight = 51
+frameNum = 0
+
 def move_player():
     global isOnGround
     global offset
@@ -53,4 +59,4 @@ def move_player():
     #update player position   
     player[0]+=player[2] #add velocity to position
     player[1]+=player[3]
-    
+    screen.blit(eric_live, (50, player[1]), (frameWidth*frameNum, 0, frameWidth, frameHeight))
